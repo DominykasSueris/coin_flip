@@ -1,8 +1,13 @@
+body {
+  font-family: "Ubuntu", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .img img {
-    width: 3rem;
-    height: 3rem;
-  }
+  width: 3rem;
+  height: 3rem;
+}
