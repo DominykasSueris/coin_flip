@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Coin from "./coin";
+import "../App.css";
 
 const FlipCoin = (): JSX.Element => {
   const [side, setSide] = useState<number | null>(null);
@@ -22,7 +23,7 @@ const FlipCoin = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Let's Flip a coin</h1>
       <div>
         {side === 1 ? (
@@ -31,11 +32,19 @@ const FlipCoin = (): JSX.Element => {
           <Coin imageUrl={"https://tinyurl.com/react-coin-heads-jpg"} imageAlt={"heads"} />
         )}
       </div>
-      <button onClick={handleFlip}>Flip Me</button>
+      <div>
+        <button className="btn btn-success" onClick={handleFlip}>
+          Flip Me
+        </button>
+      </div>
       <h2>
         Out of flips {flips} , there have been {heads} heads and {tails} tails
       </h2>
-      <button onClick={handleReset}>Reset</button>
+      <div>
+        <button className="btn btn-danger" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

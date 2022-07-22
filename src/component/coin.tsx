@@ -8,7 +8,7 @@ interface Coin {
 
 const Coins: React.FC<Coin> = ({ imageUrl, imageAlt }) => {
   return (
-    <div className="img">
+    <div className="coin">
       <img src={imageUrl} alt={imageAlt} />
     </div>
   );
