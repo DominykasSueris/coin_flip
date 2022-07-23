@@ -25,13 +25,16 @@ const FlipCoin = (): JSX.Element => {
   return (
     <div className="container">
       <h1>Let's Flip a coin</h1>
-      <div>
-        {side === 1 ? (
-          <Coin imageUrl={"https://tinyurl.com/react-coin-tails-jpg"} imageAlt={"tails"} />
-        ) : (
-          <Coin imageUrl={"https://tinyurl.com/react-coin-heads-jpg"} imageAlt={"heads"} />
-        )}
-      </div>
+      {side === null ? null : (
+        <div>
+          {side === 1 ? (
+            <Coin imageUrl={"https://tinyurl.com/react-coin-tails-jpg"} imageAlt={"tails"} />
+          ) : (
+            <Coin imageUrl={"https://tinyurl.com/react-coin-heads-jpg"} imageAlt={"heads"} />
+          )}
+        </div>
+      )}
+
       <div>
         <button className="btn btn-success" onClick={handleFlip}>
           Flip Me
