@@ -1,5 +1,5 @@
 import FlipCoin from "./component/flipCoin";
-import "./App.css";
+// import "./css/style.css";
 
 function App() {
   return (
