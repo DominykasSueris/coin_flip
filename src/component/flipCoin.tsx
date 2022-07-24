@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import Coin from "./coin";
-// import "../css/style.css";
 
 const FlipCoin = (): JSX.Element => {
   const [side, setSide] = useState<number | null>(null);
@@ -16,6 +16,10 @@ const FlipCoin = (): JSX.Element => {
   };
 
   const handleReset = () => {
+    toast.success("Start from 0!", {
+      autoClose: 1000,
+      hideProgressBar: true
+    });
     setSide(null);
     setFlips(0);
     setHeads(0);
