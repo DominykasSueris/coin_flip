@@ -9,12 +9,14 @@ function App() {
   return (
     <div className="App">
       <div className={theme}>
-        <button
-          className="themeButton"
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
-          Change theme color
-        </button>
+        <div>
+          <input
+            type="checkbox"
+            className="themeButton"
+            onChange={() => setTheme(theme === "light" ? "dark" : "light")}
+          />
+          <label htmlFor="themeButton">Change theme</label>
+        </div>
         <FlipCoin />
         <ToastContainer />
       </div>
