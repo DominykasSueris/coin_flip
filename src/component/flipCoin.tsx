@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Coin from "./coin";
-import "../css/style.css";
+// import "../css/style.css";
 
 const FlipCoin = (): JSX.Element => {
   const [side, setSide] = useState<number | null>(null);

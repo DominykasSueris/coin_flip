@@ -3,9 +3,11 @@
 }
 
 body {
-  font-family: "Ubuntu", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-image: linear-gradient(90deg, white 0%, lightgreen 50%, darkblue 100%);
+}
+:root {
+  --bs-body-font-family: "Ubuntu", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .App {
