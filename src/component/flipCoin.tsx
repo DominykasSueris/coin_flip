@@ -28,7 +28,7 @@ const FlipCoin = (): JSX.Element => {
 
   return (
     <div className="container">
-      <h1>Let's Flip a coin</h1>
+      <h1>Let's Flip a coin?</h1>
       {side === null ? null : (
         <div>
           {side === 1 ? (
@@ -40,15 +40,15 @@ const FlipCoin = (): JSX.Element => {
       )}
 
       <div>
-        <button className="btn btn-success" onClick={handleFlip}>
+        <button className="btn success" onClick={handleFlip}>
           Flip Me
         </button>
       </div>
       <h2>
-        Out of flips {flips} , there have been {heads} heads and {tails} tails
+        Out of flips {flips} , there have been {heads} heads and {tails} tails!
       </h2>
       <div>
-        <button className="btn btn-danger" onClick={handleReset}>
+        <button className="btn danger" onClick={handleReset}>
           Reset
         </button>
       </div>

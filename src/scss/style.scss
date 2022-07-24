@@ -1,31 +1,49 @@
+@import "display";
+@import "buttons.scss";
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: $font-family;
 }
 
 body {
-  background-image: linear-gradient(90deg, white 0%, lightgreen 50%, darkblue 100%);
-}
-:root {
-  --bs-body-font-family: "Ubuntu", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --toastify-color-success: #07bc0c;
-}
-
-.App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  overflow: hidden;
+
+  .light {
+    background-image: $background-image-light;
+    color: $dark-color-font;
+  }
+
+  .dark {
+    background-image: $background-image-dark;
+    color: $light-color-font;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+  height: 100vh;
 
-h1 {
-  padding: 16px;
+  h1 {
+    font-size: 64px;
+    padding: 24px;
+  }
+
+  h2 {
+    font-size: 36px;
+    padding: 24px;
+  }
 }
 
 .coin {
@@ -33,12 +51,4 @@ h1 {
     width: 76px;
     height: 76px;
   }
-}
-
-.btn-danger {
-  margin: 16px;
-}
-
-.btn-success {
-  margin: 16px;
 }
