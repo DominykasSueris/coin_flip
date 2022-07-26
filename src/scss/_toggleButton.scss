@@ -1,4 +1,8 @@
 .switch-toggle {
+  position: absolute;
+  margin-right: 16px;
+  right: 16px;
+
   input {
     height: 0;
     width: 0;
@@ -17,7 +21,7 @@
     cursor: pointer;
     width: 100px;
     height: 50px;
-    background: grey;
+    background: $toggle-background;
     border-radius: 100px;
     position: relative;
     transition: background-color 0.4s;
@@ -25,7 +29,6 @@
 
   label {
     span {
-      content: "";
       position: absolute;
       top: 2px;
       left: 2px;
@@ -33,7 +36,7 @@
       height: 45px;
       border-radius: 45px;
       transition: 0.2s;
-      background: #fff;
+      background: $toggle-span-background;
       box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
     }
   }
