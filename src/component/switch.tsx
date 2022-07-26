@@ -11,7 +11,7 @@ const Switch: React.FC<Theme> = ({ theme, setTheme }) => {
         id="background-switch"
         onChange={() => setTheme(theme === "light" ? "dark" : "light")}
       />
-      <label htmlFor="background-switch">
+      <label className={theme === "light" ? "dark" : "light"} htmlFor="background-switch">
         <span />
       </label>
     </div>
