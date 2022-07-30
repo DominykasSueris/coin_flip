@@ -32,9 +32,19 @@ const FlipCoin = (): JSX.Element => {
       {side === null ? null : (
         <div>
           {side === 1 ? (
-            <Coin imageUrl={"https://tinyurl.com/react-coin-tails-jpg"} imageAlt={"tails"} />
+            <Coin
+              imageUrl={
+                "https://media.geeksforgeeks.org/wp-content/uploads/20200916123125/tails-200x200.jpg"
+              }
+              imageAlt={"tails"}
+            />
           ) : (
-            <Coin imageUrl={"https://tinyurl.com/react-coin-heads-jpg"} imageAlt={"heads"} />
+            <Coin
+              imageUrl={
+                "https://media.geeksforgeeks.org/wp-content/uploads/20200916123059/SHalfDollarObverse2016head-300x300.jpg"
+              }
+              imageAlt={"heads"}
+            />
           )}
         </div>
       )}
