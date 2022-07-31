@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Coin from "./coin";
+import { CoinSide } from "./coinSide";
 
 const FlipCoin = (): JSX.Element => {
-  const [side, setSide] = useState<number | null>(null);
+  const [side, setSide] = useState<CoinSide>(CoinSide.null);
   const [flips, setFlips] = useState<number>(0);
   const [heads, setHeads] = useState<number>(0);
   const [tails, setTails] = useState<number>(0);
@@ -13,11 +14,11 @@ const FlipCoin = (): JSX.Element => {
     setLoading(true);
     setTimeout(() => {
       const fliped = Math.round(Math.random());
-      fliped === 1 ? setHeads(heads + 1) : setTails(tails + 1);
-      setSide(fliped + 1);
+      fliped ? setSide(CoinSide.tail) : setSide(CoinSide.head);
+      fliped ? setHeads(heads + 1) : setTails(tails + 1);
       setFlips(flips + 1);
+      setLoading(false);
     }, 2500);
-    setLoading(false);
   };
 
   const handleReset = () => {
@@ -25,7 +26,7 @@ const FlipCoin = (): JSX.Element => {
       autoClose: 1000,
       hideProgressBar: true
     });
-    setSide(null);
+    setSide(CoinSide.null);
     setFlips(0);
     setHeads(0);
     setTails(0);
@@ -34,23 +35,11 @@ const FlipCoin = (): JSX.Element => {
   return (
     <div className="container">
       <h1>Let's Flip a coin?</h1>
-      {side === null ? null : (
+      {isLoading ? (
+        <div className="loader">Loading...</div>
+      ) : (
         <div>
-          {side === 1 ? (
-            <Coin
-              imageUrl={
-                "https://media.geeksforgeeks.org/wp-content/uploads/20200916123125/tails-200x200.jpg"
-              }
-              imageAlt={"tails"}
-            />
-          ) : (
-            <Coin
-              imageUrl={
-                "https://media.geeksforgeeks.org/wp-content/uploads/20200916123059/SHalfDollarObverse2016head-300x300.jpg"
-              }
-              imageAlt={"heads"}
-            />
-          )}
+          <Coin side={side} />
         </div>
       )}
 
