@@ -7,12 +7,17 @@ const FlipCoin = (): JSX.Element => {
   const [flips, setFlips] = useState<number>(0);
   const [heads, setHeads] = useState<number>(0);
   const [tails, setTails] = useState<number>(0);
+  const [isLoading, setLoading] = useState<boolean>(false);
 
   const handleFlip = () => {
-    const fliped = Math.round(Math.random());
-    fliped === 1 ? setHeads(heads + 1) : setTails(tails + 1);
-    setSide(fliped + 1);
-    setFlips(flips + 1);
+    setLoading(true);
+    setTimeout(() => {
+      const fliped = Math.round(Math.random());
+      fliped === 1 ? setHeads(heads + 1) : setTails(tails + 1);
+      setSide(fliped + 1);
+      setFlips(flips + 1);
+    }, 2500);
+    setLoading(false);
   };
 
   const handleReset = () => {
@@ -50,7 +55,7 @@ const FlipCoin = (): JSX.Element => {
       )}
 
       <div>
-        <button className="btn success" onClick={handleFlip}>
+        <button className="btn success" onClick={handleFlip} disabled={isLoading}>
           Flip Me
         </button>
       </div>
