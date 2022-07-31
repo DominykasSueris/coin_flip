@@ -34,6 +34,11 @@
   background-color: green;
 }
 
+.success:disabled {
+  @extend %btn;
+  background-color: rgb(2, 92, 2);
+}
+
 .danger {
   @extend %btn;
   background-color: red;
