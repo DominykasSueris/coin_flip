@@ -3,7 +3,7 @@ interface Theme {
   setTheme: (str: string) => void;
 }
 
-const Switch: React.FC<Theme> = ({ theme, setTheme }) => {
+const Switch = ({ theme, setTheme }: Theme) => {
   return (
     <div className="switch-toggle">
       <input

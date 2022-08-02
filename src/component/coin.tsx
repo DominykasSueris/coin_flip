@@ -1,15 +1,14 @@
-import React from "react";
 import { CoinSide } from "./coinSide";
 
-interface Coin {
-  side: string;
-}
+type CoinProps = {
+  side: CoinSide;
+};
 
-const Coins: React.FC<Coin> = ({ side }) => {
-  if (side !== CoinSide.null)
+const Coins = ({ side }: CoinProps) => {
+  if (side !== CoinSide.empty)
     return (
       <div className="coin">
-        <img src={side} alt="" />
+        <img src={side.url} alt={side.alt} />
       </div>
     );
   return null;

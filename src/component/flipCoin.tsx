@@ -4,7 +4,7 @@ import Coin from "./coin";
 import { CoinSide } from "./coinSide";
 
 const FlipCoin = (): JSX.Element => {
-  const [side, setSide] = useState<CoinSide>(CoinSide.null);
+  const [side, setSide] = useState<CoinSide>(CoinSide.empty);
   const [flips, setFlips] = useState<number>(0);
   const [heads, setHeads] = useState<number>(0);
   const [tails, setTails] = useState<number>(0);
@@ -26,7 +26,7 @@ const FlipCoin = (): JSX.Element => {
       autoClose: 1000,
       hideProgressBar: true
     });
-    setSide(CoinSide.null);
+    setSide(CoinSide.empty);
     setFlips(0);
     setHeads(0);
     setTails(0);
