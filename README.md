@@ -8,7 +8,7 @@
 
 ## General info
 
- Simple Coin flip app created with React.js and Typescript. 
+Simple Coin flip app created with React.js and Typescript. 
 
 ## Technologies
 Project is created with:
@@ -18,7 +18,7 @@ Project is created with:
 ## Setup
 To run this project, clone it locally from github:
 
-$ git clone "https://github.com/DominykasSueris/coin_flip"
+`git clone "https://github.com/DominykasSueris/coin_flip`
 
 ## Inspiration 
 This app is a task from "Udemy Colt Stelle React.js Boothcamp"
